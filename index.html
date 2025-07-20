@@ -1,270 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>Contact - Leon Santen</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    
-    <style>
-        /* Reset and Base Styles */
-        html, body, div, span, p, a, dl, dt, dd {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
+    <head>
+        <title>Contact - Leon Santen</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
 
-        body {
-            line-height: 1;
-        }
+        <style>
+            /* Reset and Base Styles */
+            html,
+            body,
+            div,
+            span,
+            p,
+            a,
+            dl,
+            dt,
+            dd {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
 
-        /* Main Styling */
-        body {
-            background-color: #935d8c;
-            background-image:
+            body {
+                line-height: 1;
+            }
+
+            /* Main Styling */
+            body {
+                background-color: #935d8c;
+                background-image:
                 /* Grain texture overlay */
-                url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E"),
-                /* Color gradient */
-                linear-gradient(135deg, #ff8a50 0%, #e37682 25%, #b470a0 60%, #7a5fb8 100%);
-            color: rgba(255, 255, 255, 0.85);
-            font-family: "Source Sans Pro", Helvetica, sans-serif;
-            font-size: 17pt;
-            font-weight: 300;
-            line-height: 1.65;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Container */
-        .container {
-            width: 64em;
-            max-width: calc(100% - 4em);
-            margin: 0 auto;
-            padding: 5em 5em 3em 5em;
-            box-sizing: border-box;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 300;
-            line-height: 1.5;
-            margin: 0 0 0.7em 0;
-            letter-spacing: -0.025em;
-            color: #1a0a25;
-            text-shadow: 
-                0 1px 2px rgba(255, 255, 255, 0.5),
-                0 2px 4px rgba(255, 255, 255, 0.3);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            line-height: 1.2;
-            text-align: center;
-            margin-bottom: 1.5em;
-        }
-
-        h2 {
-            font-size: 1.5em;
-            margin-bottom: 1em;
-        }
-
-        p {
-            margin: 0 0 2em 0;
-            color: #1a0a25;
-            text-shadow: 
-                0 1px 2px rgba(255, 255, 255, 0.4),
-                0 2px 3px rgba(255, 255, 255, 0.2);
-        }
-
-        a {
-            transition: color 0.2s ease;
-            text-decoration: none;
-            border: none;
-            color: #1a0a25;
-            text-shadow: 
-                0 1px 2px rgba(255, 255, 255, 0.4),
-                0 2px 3px rgba(255, 255, 255, 0.2);
-            overflow-wrap: break-word;
-            word-break: keep-all;
-        }
-
-        a:hover {
-            color: #0d051a;
-        }
-
-        /* Definition List Styling */
-        dl {
-            margin: 0 0 2em 0;
-        }
-
-        dl dt {
-            display: block;
-            font-weight: 400;
-            margin: 0 0 1em 0;
-            color: #1a0a25;
-            text-shadow: 
-                0 1px 2px rgba(255, 255, 255, 0.4),
-                0 2px 3px rgba(255, 255, 255, 0.2);
-        }
-
-        dl dd {
-            margin-left: 2em;
-        }
-
-        dl.alt dt {
-            display: block;
-            width: 3em;
-            margin: 0;
-            clear: left;
-            float: left;
-        }
-
-        dl.alt dd {
-            margin: 0 0 0.9em 9.5em;
-        }
-
-        dl.alt:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        /* Button Styling */
-        .button {
-            appearance: none;
-            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            border-radius: 8px;
-            border: 0;
-            cursor: pointer;
-            display: inline-block;
-            font-weight: 300;
-            height: 2.75em;
-            line-height: 2.75em;
-            min-width: 9.25em;
-            padding: 0 1.5em;
-            text-align: center;
-            text-decoration: none;
-            white-space: nowrap;
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(42, 26, 58, 0.5);
-            color: #2a1a3a !important;
-            margin: 0.5em 0.5em 0.5em 0;
-            text-shadow: 
-                0 1px 2px rgba(255, 255, 255, 0.5),
-                0 2px 3px rgba(255, 255, 255, 0.3);
-        }
-
-        .button:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            border-bottom: 1px solid rgba(42, 26, 58, 0.5);
-            color: #1a0a2a !important;
-        }
-
-        .button:active {
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .button.primary {
-            background-color: rgba(255, 255, 255, 0.4);
-            color: #2a1a3a !important;
-            border: 1px solid rgba(42, 26, 58, 0.7);
-        }
-
-        .button.primary:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-            color: #1a0a2a !important;
-        }
-
-        .button.primary:active {
-            background-color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Button container */
-        .button-container {
-            margin-top: 2em;
-            text-align: left;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 1680px) {
-            body {
-                font-size: 14pt;
+                    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E"),
+                    /* Color gradient */
+                        linear-gradient(
+                            135deg,
+                            #ff8a50 0%,
+                            #e37682 25%,
+                            #b470a0 60%,
+                            #7a5fb8 100%
+                        );
+                color: rgba(255, 255, 255, 0.85);
+                font-family: "Source Sans Pro", Helvetica, sans-serif;
+                font-size: 17pt;
+                font-weight: 300;
+                line-height: 1.65;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
-        }
 
-        @media screen and (max-width: 1280px) {
-            body {
-                font-size: 12pt;
-            }
-            
+            /* Container */
             .container {
-                padding: 4em 4em 2em 4em;
+                width: 64em;
+                max-width: calc(100% - 4em);
+                margin: 0 auto;
+                padding: 5em 5em 3em 5em;
+                box-sizing: border-box;
             }
-        }
 
-        @media screen and (max-width: 980px) {
-            .container {
-                padding: 4em 3em 2em 3em;
+            /* Typography */
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: 300;
+                line-height: 1.5;
+                margin: 0 0 0.7em 0;
+                letter-spacing: -0.025em;
+                color: #1a0a25;
+                text-shadow:
+                    0 1px 2px rgba(255, 255, 255, 0.5),
+                    0 2px 4px rgba(255, 255, 255, 0.3);
             }
-        }
 
-        @media screen and (max-width: 736px) {
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
+                line-height: 1.2;
+                text-align: center;
+                margin-bottom: 1.5em;
             }
-            
-            .container {
-                padding: 3em 2em 1em 2em;
-            }
-        }
 
-        @media screen and (max-width: 480px) {
-            body {
-                max-width: calc(100% - 2em);
-                font-size: 11pt;
+            h2 {
+                font-size: 1.5em;
+                margin-bottom: 1em;
             }
-            
-            .container {
-                padding: 3em 1.5em 1em 1.5em;
-            }
-        }
 
-        @media screen and (max-width: 360px) {
-            body {
-                max-width: 100%;
+            p {
+                margin: 0 0 2em 0;
+                color: #1a0a25;
+                text-shadow:
+                    0 1px 2px rgba(255, 255, 255, 0.4),
+                    0 2px 3px rgba(255, 255, 255, 0.2);
             }
-            
-            .container {
-                border-radius: 0;
-                padding: 2.5em 1em 0.5em 1em;
+
+            a {
+                transition: color 0.2s ease;
+                text-decoration: none;
+                border: none;
+                color: #1a0a25;
+                text-shadow:
+                    0 1px 2px rgba(255, 255, 255, 0.4),
+                    0 2px 3px rgba(255, 255, 255, 0.2);
+                overflow-wrap: break-word;
+                word-break: keep-all;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Contact</h1>
-        
-        <dl class="alt">
-            <dt>Phone</dt>
-            <dd><a href="tel:+17815354848">+1 (781) 535-4848</a></dd>
-            
-            <dt>Email</dt>
-            <dd><a href="mailto:lsanten@olin.edu">lsanten@olin.edu</a></dd>
-            
-            <dt>Marbles</dt>
-            <dd>🔗&nbsp;<a href="https://leonsanten.info/marbles/MMSHomepage/" target="_blank">My most recent creations for dialogue with you</a></dd>
-            
-            <dt>Website</dt>
-            <dd>🔗&nbsp;<a href="https://leonsanten.info" target="_blank">leonsanten.info</a></dd>
-            
-            <dt>LinkedIn</dt>
-            <dd>🔗&nbsp;<a href="https://www.linkedin.com/in/leonsanten/" target="_blank">linkedin.com/in/leonsanten</a></dd>
-        </dl>
-    </div>
-</body>
+
+            a:hover {
+                color: #0d051a;
+            }
+
+            /* Definition List Styling */
+            dl {
+                margin: 0 0 2em 0;
+            }
+
+            dl dt {
+                display: block;
+                font-weight: 400;
+                margin: 0 0 1em 0;
+                color: #1a0a25;
+                text-shadow:
+                    0 1px 2px rgba(255, 255, 255, 0.4),
+                    0 2px 3px rgba(255, 255, 255, 0.2);
+            }
+
+            dl dd {
+                margin-left: 2em;
+            }
+
+            dl.alt dt {
+                display: block;
+                width: 3em;
+                margin: 0;
+                clear: left;
+                float: left;
+            }
+
+            dl.alt dd {
+                margin: 0 0 0.9em 9.5em;
+            }
+
+            dl.alt:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+
+            /* Button Styling */
+            .button {
+                appearance: none;
+                transition:
+                    background-color 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
+                border-radius: 8px;
+                border: 0;
+                cursor: pointer;
+                display: inline-block;
+                font-weight: 300;
+                height: 2.75em;
+                line-height: 2.75em;
+                min-width: 9.25em;
+                padding: 0 1.5em;
+                text-align: center;
+                text-decoration: none;
+                white-space: nowrap;
+                background-color: rgba(255, 255, 255, 0.2);
+                border: 1px solid rgba(42, 26, 58, 0.5);
+                color: #2a1a3a !important;
+                margin: 0.5em 0.5em 0.5em 0;
+                text-shadow:
+                    0 1px 2px rgba(255, 255, 255, 0.5),
+                    0 2px 3px rgba(255, 255, 255, 0.3);
+            }
+
+            .button:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(42, 26, 58, 0.5);
+                color: #1a0a2a !important;
+            }
+
+            .button:active {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+
+            .button.primary {
+                background-color: rgba(255, 255, 255, 0.4);
+                color: #2a1a3a !important;
+                border: 1px solid rgba(42, 26, 58, 0.7);
+            }
+
+            .button.primary:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+                color: #1a0a2a !important;
+            }
+
+            .button.primary:active {
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+
+            /* Button container */
+            .button-container {
+                margin-top: 2em;
+                text-align: left;
+            }
+
+            /* Responsive Design */
+            @media screen and (max-width: 1680px) {
+                body {
+                    font-size: 14pt;
+                }
+            }
+
+            @media screen and (max-width: 1280px) {
+                body {
+                    font-size: 12pt;
+                }
+
+                .container {
+                    padding: 4em 4em 2em 4em;
+                }
+            }
+
+            @media screen and (max-width: 980px) {
+                .container {
+                    padding: 4em 3em 2em 3em;
+                }
+            }
+
+            @media screen and (max-width: 736px) {
+                h1 {
+                    font-size: 2em;
+                }
+
+                .container {
+                    padding: 3em 2em 1em 2em;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                body {
+                    max-width: calc(100% - 0.5em);
+                    font-size: 11pt;
+                }
+
+                .container {
+                    padding: 3em 0.25em 1em 0.25em;
+                }
+            }
+
+            @media screen and (max-width: 360px) {
+                body {
+                    max-width: calc(100% - 0.5em);
+                }
+
+                .container {
+                    border-radius: 0;
+                    padding: 2.5em 0.25em 0.5em 0.25em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Contact</h1>
+
+            <dl class="alt">
+                <dt>Phone</dt>
+                <dd><a href="tel:+17815354848">+1 (781) 535-4848</a></dd>
+
+                <dt>Email</dt>
+                <dd><a href="mailto:lsanten@olin.edu">lsanten@olin.edu</a></dd>
+
+                <dt>Marbles</dt>
+                <dd>
+                    🔗&nbsp;<a
+                        href="https://leonsanten.info/marbles/MMSHomepage/"
+                        target="_blank"
+                        >My most recent creations for dialogue with you</a
+                    >
+                </dd>
+
+                <dt>Website</dt>
+                <dd>
+                    🔗&nbsp;<a href="https://leonsanten.info" target="_blank"
+                        >leonsanten.info</a
+                    >
+                </dd>
+
+                <dt>LinkedIn</dt>
+                <dd>
+                    🔗&nbsp;<a
+                        href="https://www.linkedin.com/in/leonsanten/"
+                        target="_blank"
+                        >linkedin.com/in/leonsanten</a
+                    >
+                </dd>
+            </dl>
+        </div>
+    </body>
 </html>
